@@ -13,11 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @AllArgsConstructor
 public class HelloWorldController {
+
   private final Mailer mailer;
 
   @GetMapping("/hello")
   @SneakyThrows
-  public String helloWorld(@RequestParam String to) {
+  public String hello_world(@RequestParam String to) {
     var email =
             new Email(new InternetAddress(to), List.of(), List.of(), "Hello world", "... world!", List.of());
 
