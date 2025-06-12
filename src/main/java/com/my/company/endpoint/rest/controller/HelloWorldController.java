@@ -18,7 +18,7 @@ public class HelloWorldController {
 
   @GetMapping("/hello")
   @SneakyThrows
-  public String helloWorld(@RequestParam String to) {
+  public String hello_world(@RequestParam String to) {
     var email =
             new Email(new InternetAddress(to), List.of(), List.of(), "Hello world", "... world!", List.of());
 
