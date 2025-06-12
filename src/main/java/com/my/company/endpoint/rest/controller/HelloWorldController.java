@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 public class HelloWorldController {
 
-  private final Mailer mailer;
+  Mailer mailer;
 
   @GetMapping("/hello")
   @SneakyThrows
